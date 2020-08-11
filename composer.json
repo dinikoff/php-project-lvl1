@@ -1,0 +1,12 @@
+{
+    "name": "dinikoff/php-project-lvl1",
+    "description": "training project on php",
+    "type": "project",
+    "authors": [
+        {
+            "name": "dinikoff",
+            "email": "zarazablin@gmail.com"
+        }
+    ],
+    "require": {}
+}
