@@ -8,5 +8,9 @@
             "email": "zarazablin@gmail.com"
         }
     ],
+    "bin": [
+        "bin/brain-games"
+    ],
+    "license": "MIT",
     "require": {}
 }
