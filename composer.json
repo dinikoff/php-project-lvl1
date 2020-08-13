@@ -19,7 +19,9 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Even.php"
+            "src/games/Even.php",
+            "src/games/Calc.php",
+            "src/GameEngine.php"
         ]
     },
     "require-dev": {
