@@ -24,3 +24,9 @@ composer global require dinikoff/php-project-lvl1
 [![asciicast](https://asciinema.org/a/xvvsXvkRDMzI355O62DAAMeJ6.svg)](https://asciinema.org/a/xvvsXvkRDMzI355O62DAAMeJ6)
 
 [![asciicast](https://asciinema.org/a/Su3QKsKKWmGUKlE0lkqZeJ3WW.svg)](https://asciinema.org/a/Su3QKsKKWmGUKlE0lkqZeJ3WW)
+
+## Калькулятор
+
+[![asciicast](https://asciinema.org/a/Bdn3FNjHBlecinGeoRRqxghHq.svg)](https://asciinema.org/a/Bdn3FNjHBlecinGeoRRqxghHq)
+
+[![asciicast](https://asciinema.org/a/WVDrOP7VhwCV2Xo5b7AuBl3oU.svg)](https://asciinema.org/a/WVDrOP7VhwCV2Xo5b7AuBl3oU)
