@@ -19,6 +19,7 @@ function getGameDataCalc()
                 break;
             case '*':
                 $answer = $firstNumber * $secondNumber;
+                break;
         }
         $result[$i] = [$question, strval($answer)];
     }
