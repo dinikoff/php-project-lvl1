@@ -27,15 +27,17 @@ function getGameDataCalc()
 
 function getMathOperation()
 {
-    $randNumber = rand(0,2);
+    $randNumber = rand(0, 2);
     switch ($randNumber) {
         case 0:
             $result = '+';
             break;
         case 1:
             $result = '-';
+            break;
         case 2:
             $result = '*';
+            break;
     }
     return $result;
 }
