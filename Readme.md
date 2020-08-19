@@ -41,3 +41,9 @@ composer global require dinikoff/php-project-lvl1
 [![asciicast](https://asciinema.org/a/aEEs1j2J0AbmFOCeswPHpgEdP.svg)](https://asciinema.org/a/aEEs1j2J0AbmFOCeswPHpgEdP)
 
 [![asciicast](https://asciinema.org/a/3zIGLSxWeOGwETA0pP6tSWpFE.svg)](https://asciinema.org/a/3zIGLSxWeOGwETA0pP6tSWpFE)
+
+## Простое ли число?
+
+[![asciicast](https://asciinema.org/a/aKNjbAVkiIzUDemw3Ew5QDJIF.svg)](https://asciinema.org/a/aKNjbAVkiIzUDemw3Ew5QDJIF)
+
+[![asciicast](https://asciinema.org/a/4SSGL1Civa0XaFfFGJJ3uDUyq.svg)](https://asciinema.org/a/4SSGL1Civa0XaFfFGJJ3uDUyq)
