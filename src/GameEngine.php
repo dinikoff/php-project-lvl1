@@ -5,6 +5,7 @@ namespace Brain\GameEngine;
 use function Brain\Games\Calc\getGameDataCalc;
 use function Brain\Games\Even\getGameDataEven;
 use function Brain\Games\Gcd\getGameDataGcd;
+use function Brain\Games\Prime\getGameDataPrime;
 use function Brain\Games\Progression\getGameDataProgression;
 use function cli\line;
 use function cli\prompt;
@@ -24,6 +25,10 @@ function runGame($gameType)
             break;
         case 'progression':
             $gameData = getGameDataProgression();
+            break;
+        case 'prime':
+            $gameData = getGameDataPrime();
+            break;
     }
 
     $message = $gameData[0];
