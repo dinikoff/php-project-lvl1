@@ -35,3 +35,9 @@ composer global require dinikoff/php-project-lvl1
 [![asciicast](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh.svg)](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh)
 
 [![asciicast](https://asciinema.org/a/OdXnb1tCRVH6Jsp6A9rrPkWUd.svg)](https://asciinema.org/a/OdXnb1tCRVH6Jsp6A9rrPkWUd)
+
+## Арифметическая прогрессия
+
+[![asciicast](https://asciinema.org/a/aEEs1j2J0AbmFOCeswPHpgEdP.svg)](https://asciinema.org/a/aEEs1j2J0AbmFOCeswPHpgEdP)
+
+[![asciicast](https://asciinema.org/a/3zIGLSxWeOGwETA0pP6tSWpFE.svg)](https://asciinema.org/a/3zIGLSxWeOGwETA0pP6tSWpFE)
