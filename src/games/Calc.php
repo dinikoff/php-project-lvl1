@@ -4,8 +4,8 @@ namespace Brain\Games\Calc;
 
 function getGameDataCalc()
 {
-    $result = [];
-    for ($i = 0; $i < 3; $i++) {
+    $result[0] = 'What is the result of the expression?';
+    for ($i = 1; $i < 4; $i++) {
         $firstNumber = rand(1, 99);
         $secondNumber = rand(1, 99);
         $mathOperation = getMathOperation();

@@ -11,7 +11,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "license": "MIT",
     "require": {
@@ -22,6 +23,7 @@
             "src/Cli.php",
             "src/games/Even.php",
             "src/games/Calc.php",
+            "src/games/Gcd.php",
             "src/GameEngine.php"
         ]
     },

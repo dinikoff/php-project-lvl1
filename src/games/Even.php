@@ -4,8 +4,8 @@ namespace Brain\Games\Even;
 
 function getGameDataEven()
 {
-    $result = [];
-    for ($i = 0; $i < 3; $i++) {
+    $result[0] = 'Answer "yes" if the number is even, otherwise answer "no".';
+    for ($i = 1; $i < 4; $i++) {
         $question = rand(1, 99);
         if (isEven($question)) {
             $answer = 'yes';

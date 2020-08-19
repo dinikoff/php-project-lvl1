@@ -4,17 +4,12 @@ namespace Brain\GameEngine;
 
 use function Brain\Games\Calc\getGameDataCalc;
 use function Brain\Games\Even\getGameDataEven;
+use function Brain\Games\Gcd\getGameDataGcd;
 use function cli\line;
 use function cli\prompt;
 
 function runGame($gameType)
 {
-    line('Welcome to the Brain Game!');
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    line(' ');
-    $name = prompt('May I have your name?');
-    line('Hello, %s!', $name);
-    line(' ');
 
     switch ($gameType) {
         case 'even':
@@ -23,9 +18,21 @@ function runGame($gameType)
         case 'calc':
             $gameData = getGameDataCalc();
             break;
+        case 'gcd':
+            $gameData = getGameDataGcd();
+            break;
     }
 
-    for ($i = 0; $i < 3; $i++) {
+    $message = $gameData[0];
+
+    line('Welcome to the Brain Game!');
+    line($message);
+    line(' ');
+    $name = prompt('May I have your name?');
+    line('Hello, %s!', $name);
+    line(' ');
+
+    for ($i = 1; $i < 4; $i++) {
         $question = $gameData[$i][0];
         $answer = $gameData[$i][1];
         line("Question: {$question}");
