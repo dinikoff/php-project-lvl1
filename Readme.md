@@ -21,12 +21,17 @@ composer global require dinikoff/php-project-lvl1
 # Геймплей
 
 ## Проверка на чётность
-[![asciicast](https://asciinema.org/a/xvvsXvkRDMzI355O62DAAMeJ6.svg)](https://asciinema.org/a/xvvsXvkRDMzI355O62DAAMeJ6)
+[![asciicast](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh.svg)](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh)
 
-[![asciicast](https://asciinema.org/a/Su3QKsKKWmGUKlE0lkqZeJ3WW.svg)](https://asciinema.org/a/Su3QKsKKWmGUKlE0lkqZeJ3WW)
-
+[![asciicast](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh.svg)](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh)
 ## Калькулятор
 
-[![asciicast](https://asciinema.org/a/Bdn3FNjHBlecinGeoRRqxghHq.svg)](https://asciinema.org/a/Bdn3FNjHBlecinGeoRRqxghHq)
+[![asciicast](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh.svg)](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh)
 
-[![asciicast](https://asciinema.org/a/WVDrOP7VhwCV2Xo5b7AuBl3oU.svg)](https://asciinema.org/a/WVDrOP7VhwCV2Xo5b7AuBl3oU)
+[![asciicast](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh.svg)](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh)
+
+## Нахождение НОД
+
+[![asciicast](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh.svg)](https://asciinema.org/a/I1Ya2vbPfsjNUtiO1HjSWwydh)
+
+[![asciicast](https://asciinema.org/a/OdXnb1tCRVH6Jsp6A9rrPkWUd.svg)](https://asciinema.org/a/OdXnb1tCRVH6Jsp6A9rrPkWUd)
