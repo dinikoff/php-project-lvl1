@@ -16,7 +16,7 @@
 composer global require dinikoff/php-project-lvl1
 ```
 
-[![asciicast](https://asciinema.org/a/Bx4NLRA5Q0aNZgqYWU99AbGtd.svg)](https://asciinema.org/a/Bx4NLRA5Q0aNZgqYWU99AbGtd)
+[![asciicast](https://asciinema.org/a/F8Z0oib6nmaDgHv21aImWBZcC.svg)](https://asciinema.org/a/F8Z0oib6nmaDgHv21aImWBZcC)
 
 # Геймплей
 
