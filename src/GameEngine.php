@@ -3,6 +3,7 @@
 namespace Brain\GameEngine;
 
 use Error;
+
 use function Brain\Games\Calc\getGameDataCalc;
 use function Brain\Games\Even\getGameDataEven;
 use function Brain\Games\Gcd\getGameDataGcd;
@@ -31,7 +32,7 @@ function runGame($gameType)
             $gameData = getGameDataPrime($roundNumber);
             break;
         default:
-            throw new Error("Unknown game type: {$gameType}!" );
+            throw new Error("Unknown game type: {$gameType}!");
     }
 
     $task = $gameData['task'];

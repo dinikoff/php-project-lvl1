@@ -20,6 +20,8 @@ function getGameDataCalc($roundNumber)
             case '*':
                 $answer = $firstNumber * $secondNumber;
                 break;
+            default:
+                throw new Error("Unknown operation: {$mathOperation}");
         }
         $result['rounds'][] = [
             'question' => $question,
@@ -42,6 +44,8 @@ function getMathOperation()
         case 2:
             $result = '*';
             break;
+        default:
+            throw new Error("Random number is out of range");
     }
     return $result;
 }
