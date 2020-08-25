@@ -2,10 +2,10 @@
 
 namespace Brain\Games\Calc;
 
-function getGameDataCalc()
+function getGameDataCalc($roundNumber)
 {
     $result['task'] = 'What is the result of the expression?';
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $roundNumber; $i++) {
         $firstNumber = rand(1, 99);
         $secondNumber = rand(1, 99);
         $mathOperation = getMathOperation();

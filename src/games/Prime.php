@@ -4,10 +4,10 @@ namespace Brain\Games\Prime;
 
 use function Brain\Games\Even\isEven;
 
-function getGameDataPrime()
+function getGameDataPrime($roundNumber)
 {
     $result['task'] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    for ($i = 1; $i < 4; $i++) {
+    for ($i = 0; $i < $roundNumber; $i++) {
         $question = rand(1, 99);
         if (isPrime($question)) {
             $answer = 'yes';

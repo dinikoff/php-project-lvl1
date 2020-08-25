@@ -2,12 +2,12 @@
 
 namespace Brain\Games\Progression;
 
-function getGameDataProgression()
+function getGameDataProgression($roundNumber)
 {
     $result['task'] = 'What number is missing in the progression?';
     $progressionLength = 10;
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $roundNumber; $i++) {
         $currentNumber = rand(1, 99);
         $step = rand(1, 10);
         $hiddenIndex = rand(0, $progressionLength - 1);

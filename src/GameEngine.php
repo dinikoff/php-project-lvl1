@@ -13,22 +13,22 @@ use function cli\prompt;
 
 function runGame($gameType)
 {
-
+    $roundNumber = 3;
     switch ($gameType) {
         case 'even':
-            $gameData = getGameDataEven();
+            $gameData = getGameDataEven($roundNumber);
             break;
         case 'calc':
-            $gameData = getGameDataCalc();
+            $gameData = getGameDataCalc($roundNumber);
             break;
         case 'gcd':
-            $gameData = getGameDataGcd();
+            $gameData = getGameDataGcd($roundNumber);
             break;
         case 'progression':
-            $gameData = getGameDataProgression();
+            $gameData = getGameDataProgression($roundNumber);
             break;
         case 'prime':
-            $gameData = getGameDataPrime();
+            $gameData = getGameDataPrime($roundNumber);
             break;
         default:
             throw new Error("Unknown game type: {$gameType}!" );
@@ -44,7 +44,7 @@ function runGame($gameType)
 
     $rounds = $gameData['rounds'];
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $roundNumber; $i++) {
         ['question' => $question, 'answer' => $answer] = $rounds[$i];
         line("Question: {$question}");
         $userAnswer = strtolower(trim(prompt('Your answer')));
