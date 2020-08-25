@@ -4,8 +4,8 @@ namespace Brain\Games\Calc;
 
 function getGameDataCalc()
 {
-    $result[0] = 'What is the result of the expression?';
-    for ($i = 1; $i < 4; $i++) {
+    $result['task'] = 'What is the result of the expression?';
+    for ($i = 0; $i < 3; $i++) {
         $firstNumber = rand(1, 99);
         $secondNumber = rand(1, 99);
         $mathOperation = getMathOperation();
@@ -21,7 +21,10 @@ function getGameDataCalc()
                 $answer = $firstNumber * $secondNumber;
                 break;
         }
-        $result[$i] = [$question, strval($answer)];
+        $result['rounds'][] = [
+            'question' => $question,
+            'answer' => strval($answer)
+        ];
     }
     return $result;
 }

@@ -6,7 +6,7 @@ use function Brain\Games\Even\isEven;
 
 function getGameDataPrime()
 {
-    $result[0] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $result['task'] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     for ($i = 1; $i < 4; $i++) {
         $question = rand(1, 99);
         if (isPrime($question)) {
@@ -14,7 +14,10 @@ function getGameDataPrime()
         } else {
             $answer = 'no';
         }
-        $result[$i] = [$question, $answer];
+        $result['rounds'][] = [
+            'question' => $question,
+            'answer' => $answer
+        ];
     }
     return $result;
 }

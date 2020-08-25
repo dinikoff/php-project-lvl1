@@ -2,6 +2,7 @@
 
 namespace Brain\GameEngine;
 
+use Error;
 use function Brain\Games\Calc\getGameDataCalc;
 use function Brain\Games\Even\getGameDataEven;
 use function Brain\Games\Gcd\getGameDataGcd;
@@ -29,20 +30,22 @@ function runGame($gameType)
         case 'prime':
             $gameData = getGameDataPrime();
             break;
+        default:
+            throw new Error("Unknown game type: {$gameType}!" );
     }
 
-    $message = $gameData[0];
-
+    $task = $gameData['task'];
     line('Welcome to the Brain Game!');
-    line($message);
+    line($task);
     line(' ');
     $name = prompt('May I have your name?');
     line('Hello, %s!', $name);
     line(' ');
 
-    for ($i = 1; $i < 4; $i++) {
-        $question = $gameData[$i][0];
-        $answer = $gameData[$i][1];
+    $rounds = $gameData['rounds'];
+
+    for ($i = 0; $i < 3; $i++) {
+        ['question' => $question, 'answer' => $answer] = $rounds[$i];
         line("Question: {$question}");
         $userAnswer = strtolower(trim(prompt('Your answer')));
         if ($userAnswer !== $answer) {

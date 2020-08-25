@@ -4,10 +4,10 @@ namespace Brain\Games\Progression;
 
 function getGameDataProgression()
 {
-    $result[0] = 'What number is missing in the progression?';
+    $result['task'] = 'What number is missing in the progression?';
     $progressionLength = 10;
 
-    for ($i = 1; $i < 4; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $currentNumber = rand(1, 99);
         $step = rand(1, 10);
         $hiddenIndex = rand(0, $progressionLength - 1);
@@ -24,7 +24,10 @@ function getGameDataProgression()
             $currentNumber += $step;
         }
         $question = implode(' ', $parts);
-        $result[$i] = [$question, $answer];
+        $result['rounds'][] = [
+            'question' => $question,
+            'answer' => $answer
+        ];
     }
 
     return $result;
