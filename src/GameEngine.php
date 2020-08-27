@@ -4,11 +4,11 @@ namespace Brain\GameEngine;
 
 use Error;
 
-use function Brain\Games\Calc\getGameDataCalc;
-use function Brain\Games\Even\getGameDataEven;
-use function Brain\Games\Gcd\getGameDataGcd;
-use function Brain\Games\Prime\getGameDataPrime;
-use function Brain\Games\Progression\getGameDataProgression;
+use function Brain\Games\Calc\generateGameDataCalc;
+use function Brain\Games\Even\generateGameDataEven;
+use function Brain\Games\Gcd\generateGameDataGcd;
+use function Brain\Games\Prime\generateGameDataPrime;
+use function Brain\Games\Progression\generateGameDataProgression;
 use function cli\line;
 use function cli\prompt;
 
@@ -18,19 +18,19 @@ function runGame($gameType)
 {
     switch ($gameType) {
         case 'even':
-            $gameData = getGameDataEven(MAX_GAME_ROUNDS_NUMBER);
+            $gameData = generateGameDataEven(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'calc':
-            $gameData = getGameDataCalc(MAX_GAME_ROUNDS_NUMBER);
+            $gameData = generateGameDataCalc(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'gcd':
-            $gameData = getGameDataGcd(MAX_GAME_ROUNDS_NUMBER);
+            $gameData = generateGameDataGcd(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'progression':
-            $gameData = getGameDataProgression(MAX_GAME_ROUNDS_NUMBER);
+            $gameData = generateGameDataProgression(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'prime':
-            $gameData = getGameDataPrime(MAX_GAME_ROUNDS_NUMBER);
+            $gameData = generateGameDataPrime(MAX_GAME_ROUNDS_NUMBER);
             break;
         default:
             throw new Error("Unknown game type: {$gameType}!");

@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Even;
 
-function getGameDataEven($roundNumber)
+function generateGameDataEven($roundNumber)
 {
     $result['task'] = 'Answer "yes" if the number is even, otherwise answer "no".';
     for ($i = 0; $i < $roundNumber; $i++) {

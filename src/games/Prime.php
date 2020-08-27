@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Prime;
 
-function getGameDataPrime($roundNumber)
+function generateGameDataPrime($roundNumber)
 {
     $result['task'] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     for ($i = 0; $i < $roundNumber; $i++) {

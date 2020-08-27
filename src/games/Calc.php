@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Calc;
 
-function getGameDataCalc($roundNumber)
+function generateGameDataCalc($roundNumber)
 {
     $result['task'] = 'What is the result of the expression?';
     for ($i = 0; $i < $roundNumber; $i++) {

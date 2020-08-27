@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Progression;
 
-function getGameDataProgression($roundNumber)
+function generateGameDataProgression($roundNumber)
 {
     $result['task'] = 'What number is missing in the progression?';
     $progressionLength = 10;

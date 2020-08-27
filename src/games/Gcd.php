@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Gcd;
 
-function getGameDataGcd($roundNumber)
+function generateGameDataGcd($roundNumber)
 {
     $result['task'] = 'Find the greatest common divisor of given numbers.';
     for ($i = 0; $i < $roundNumber; $i++) {
