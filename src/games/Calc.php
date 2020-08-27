@@ -2,6 +2,8 @@
 
 namespace Brain\Games\Calc;
 
+use function Brain\Games\Utils\addQuestionAnswerToResult;
+
 function generateGameDataCalc($roundNumber)
 {
     $result['task'] = 'What is the result of the expression?';
@@ -23,10 +25,7 @@ function generateGameDataCalc($roundNumber)
             default:
                 throw new Error("Unknown operation: {$mathOperation}");
         }
-        $result['rounds'][] = [
-            'question' => $question,
-            'answer' => strval($answer)
-        ];
+        $result = addQuestionAnswerToResult($result, $question, $answer);
     }
     return $result;
 }

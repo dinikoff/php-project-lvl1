@@ -2,6 +2,8 @@
 
 namespace Brain\Games\Progression;
 
+use function Brain\Games\Utils\addQuestionAnswerToResult;
+
 function generateGameDataProgression($roundNumber)
 {
     $result['task'] = 'What number is missing in the progression?';
@@ -24,10 +26,7 @@ function generateGameDataProgression($roundNumber)
             $currentNumber += $step;
         }
         $question = implode(' ', $parts);
-        $result['rounds'][] = [
-            'question' => $question,
-            'answer' => $answer
-        ];
+        $result = addQuestionAnswerToResult($result, $question, $answer);
     }
 
     return $result;

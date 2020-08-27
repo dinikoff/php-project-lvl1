@@ -2,6 +2,8 @@
 
 namespace Brain\Games\Gcd;
 
+use function Brain\Games\Utils\addQuestionAnswerToResult;
+
 function generateGameDataGcd($roundNumber)
 {
     $result['task'] = 'Find the greatest common divisor of given numbers.';
@@ -11,10 +13,7 @@ function generateGameDataGcd($roundNumber)
         $question = "{$firstNumber} {$secondNumber}";
         $gcd = getGcd($firstNumber, $secondNumber);
         $answer = strval($gcd);
-        $result['rounds'][] = [
-            'question' => $question,
-            'answer' => $answer
-        ];
+        $result = addQuestionAnswerToResult($result, $question, $answer);
     }
     return $result;
 }
