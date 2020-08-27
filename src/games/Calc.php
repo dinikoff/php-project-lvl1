@@ -4,30 +4,31 @@ namespace Brain\Games\Calc;
 
 use function Brain\Games\Utils\addQuestionAnswerToResult;
 
-function generateGameDataCalc($roundNumber)
+function generateQuestionAnswerCalc()
 {
-    $result['task'] = 'What is the result of the expression?';
-    for ($i = 0; $i < $roundNumber; $i++) {
-        $firstNumber = rand(1, 99);
-        $secondNumber = rand(1, 99);
-        $mathOperation = getMathOperation();
-        $question = "{$firstNumber} {$mathOperation} {$secondNumber}";
-        switch ($mathOperation) {
-            case '+':
-                $answer = $firstNumber + $secondNumber;
-                break;
-            case '-':
-                $answer = $firstNumber - $secondNumber;
-                break;
-            case '*':
-                $answer = $firstNumber * $secondNumber;
-                break;
-            default:
-                throw new Error("Unknown operation: {$mathOperation}");
-        }
-        $result = addQuestionAnswerToResult($result, $question, $answer);
+    $firstNumber = rand(1, 99);
+    $secondNumber = rand(1, 99);
+    $mathOperation = getMathOperation();
+    $question = "{$firstNumber} {$mathOperation} {$secondNumber}";
+    switch ($mathOperation) {
+        case '+':
+            $answer = $firstNumber + $secondNumber;
+            break;
+        case '-':
+            $answer = $firstNumber - $secondNumber;
+            break;
+        case '*':
+            $answer = $firstNumber * $secondNumber;
+            break;
+        default:
+            throw new Error("Unknown operation: {$mathOperation}");
     }
-    return $result;
+    return ['question' => $question, 'answer' => strval($answer)];
+}
+
+function getCalcGameTask()
+{
+    return 'What is the result of the expression?';
 }
 
 function getMathOperation()

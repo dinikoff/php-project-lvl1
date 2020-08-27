@@ -2,17 +2,16 @@
 
 namespace Brain\Games\Prime;
 
-use function Brain\Games\Utils\addQuestionAnswerToResult;
-
-function generateGameDataPrime($roundNumber)
+function generateQuestionAnswerPrime()
 {
-    $result['task'] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    for ($i = 0; $i < $roundNumber; $i++) {
-        $question = rand(1, 99);
-        $answer = isPrime($question) ? 'yes' : 'no';
-        $result = addQuestionAnswerToResult($result, $question, $answer);
-    }
-    return $result;
+    $question = rand(1, 99);
+    $answer = isPrime($question) ? 'yes' : 'no';
+    return ['question' => $question, 'answer' => strval($answer)];
+}
+
+function getPrimeGameTask()
+{
+    return 'Answer "yes" if given number is prime. Otherwise answer "no".';
 }
 
 function isPrime($n)

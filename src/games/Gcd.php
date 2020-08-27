@@ -2,20 +2,19 @@
 
 namespace Brain\Games\Gcd;
 
-use function Brain\Games\Utils\addQuestionAnswerToResult;
-
-function generateGameDataGcd($roundNumber)
+function generateQuestionAnswerGCD()
 {
-    $result['task'] = 'Find the greatest common divisor of given numbers.';
-    for ($i = 0; $i < $roundNumber; $i++) {
-        $firstNumber = rand(1, 99);
-        $secondNumber = rand(1, 99);
-        $question = "{$firstNumber} {$secondNumber}";
-        $gcd = getGcd($firstNumber, $secondNumber);
-        $answer = strval($gcd);
-        $result = addQuestionAnswerToResult($result, $question, $answer);
-    }
-    return $result;
+    $firstNumber = rand(1, 99);
+    $secondNumber = rand(1, 99);
+    $question = "{$firstNumber} {$secondNumber}";
+    $gcd = getGcd($firstNumber, $secondNumber);
+    $answer = strval($gcd);
+    return ['question' => $question, 'answer' => $answer];
+}
+
+function getGCDGameTask()
+{
+    return 'Find the greatest common divisor of given numbers.';
 }
 
 function getGcd($firstNumber, $secondNumber)
