@@ -12,24 +12,25 @@ use function Brain\Games\Progression\getGameDataProgression;
 use function cli\line;
 use function cli\prompt;
 
+const MAX_GAME_ROUNDS_NUMBER = 3;
+
 function runGame($gameType)
 {
-    $roundNumber = 3;
     switch ($gameType) {
         case 'even':
-            $gameData = getGameDataEven($roundNumber);
+            $gameData = getGameDataEven(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'calc':
-            $gameData = getGameDataCalc($roundNumber);
+            $gameData = getGameDataCalc(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'gcd':
-            $gameData = getGameDataGcd($roundNumber);
+            $gameData = getGameDataGcd(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'progression':
-            $gameData = getGameDataProgression($roundNumber);
+            $gameData = getGameDataProgression(MAX_GAME_ROUNDS_NUMBER);
             break;
         case 'prime':
-            $gameData = getGameDataPrime($roundNumber);
+            $gameData = getGameDataPrime(MAX_GAME_ROUNDS_NUMBER);
             break;
         default:
             throw new Error("Unknown game type: {$gameType}!");
@@ -45,7 +46,7 @@ function runGame($gameType)
 
     $rounds = $gameData['rounds'];
 
-    for ($i = 0; $i < $roundNumber; $i++) {
+    for ($i = 0; $i < MAX_GAME_ROUNDS_NUMBER; $i++) {
         ['question' => $question, 'answer' => $answer] = $rounds[$i];
         line("Question: {$question}");
         $userAnswer = strtolower(trim(prompt('Your answer')));
