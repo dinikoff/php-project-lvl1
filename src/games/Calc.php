@@ -4,7 +4,6 @@ namespace Brain\Games\Calc;
 
 use Error;
 
-
 const TASK = 'What is the result of the expression?';
 const MATH_OPERATIONS = ['+', '-', '*'];
 
