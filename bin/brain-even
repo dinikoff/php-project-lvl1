@@ -2,7 +2,9 @@
 <?php
 
 use function \Brain\GameEngine\runGame;
+use function \Brain\Games\Even\makeGeneratorQuestionAnswer;
+use const \Brain\Games\Even\TASK;
 
 require_once ('bootstrap');
 
-runGame('even');
+runGame(makeGeneratorQuestionAnswer(), TASK);

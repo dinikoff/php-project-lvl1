@@ -2,19 +2,18 @@
 
 namespace Brain\Games\Gcd;
 
-function generateQuestionAnswerGCD()
-{
-    $firstNumber = rand(1, 99);
-    $secondNumber = rand(1, 99);
-    $question = "{$firstNumber} {$secondNumber}";
-    $gcd = getGcd($firstNumber, $secondNumber);
-    $answer = strval($gcd);
-    return ['question' => $question, 'answer' => $answer];
-}
+const TASK = 'Find the greatest common divisor of given numbers.';
 
-function getGCDGameTask()
+function makeGeneratorQuestionAnswer()
 {
-    return 'Find the greatest common divisor of given numbers.';
+    return function () {
+        $firstNumber = rand(1, 99);
+        $secondNumber = rand(1, 99);
+        $question = "{$firstNumber} {$secondNumber}";
+        $gcd = getGcd($firstNumber, $secondNumber);
+        $answer = strval($gcd);
+        return ['question' => $question, 'answer' => $answer];
+    };
 }
 
 function getGcd($firstNumber, $secondNumber)

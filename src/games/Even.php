@@ -4,16 +4,15 @@ namespace Brain\Games\Even;
 
 use function Brain\Games\Utils\addQuestionAnswerToResult;
 
-function generateQuestionAnswerEven()
-{
-    $question = rand(1, 99);
-    $answer = isEven($question) ? 'yes' : 'no';
-    return ['question' => $question, 'answer' => $answer];
-}
+const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function getEvenGameTask()
+function makeGeneratorQuestionAnswer()
 {
-    return 'Answer "yes" if the number is even, otherwise answer "no".';
+    return function () {
+        $question = rand(1, 99);
+        $answer = isEven($question) ? 'yes' : 'no';
+        return ['question' => $question, 'answer' => $answer];
+    };
 }
 
 function isEven($number)

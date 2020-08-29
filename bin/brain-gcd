@@ -2,7 +2,9 @@
 <?php
 
 use function \Brain\GameEngine\runGame;
+use function \Brain\Games\Gcd\makeGeneratorQuestionAnswer;
+use const \Brain\Games\Gcd\TASK;
 
 require_once ('bootstrap');
 
-runGame('gcd');
+runGame(makeGeneratorQuestionAnswer(), TASK);
