@@ -2,8 +2,9 @@
 
 namespace Brain\Games\Calc;
 
-use function Brain\Games\Utils\addQuestionAnswerToResult;
 use Error;
+
+use function Brain\Games\Utils\addQuestionAnswerToResult;
 
 const TASK = 'What is the result of the expression?';
 const MATH_OPERATIONS = ['+', '-', '*'];
