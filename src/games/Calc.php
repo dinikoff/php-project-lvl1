@@ -13,7 +13,7 @@ function generatorQuestionAnswer()
 {
     $firstNumber = rand(1, 99);
     $secondNumber = rand(1, 99);
-    $mathOperation = MATH_OPERATIONS[rand(0, 2)];
+    $mathOperation = MATH_OPERATIONS[rand(0, count(MATH_OPERATIONS) - 1)];
     $question = "{$firstNumber} {$mathOperation} {$secondNumber}";
     switch ($mathOperation) {
         case '+':
