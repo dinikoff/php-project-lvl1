@@ -4,13 +4,11 @@ namespace Brain\Games\Prime;
 
 const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function makeGeneratorQuestionAnswer()
+function generatorQuestionAnswer()
 {
-    return function () {
-        $question = rand(1, 99);
-        $answer = isPrime($question) ? 'yes' : 'no';
-        return ['question' => $question, 'answer' => strval($answer)];
-    };
+    $question = rand(1, 99);
+    $answer = isPrime($question) ? 'yes' : 'no';
+    return ['question' => $question, 'answer' => strval($answer)];
 }
 
 function isPrime($n)

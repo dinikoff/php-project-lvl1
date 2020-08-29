@@ -2,9 +2,9 @@
 <?php
 
 use function \Brain\GameEngine\runGame;
-use function \Brain\Games\Prime\makeGeneratorQuestionAnswer;
+use function \Brain\Games\Prime\generatorQuestionAnswer;
 use const \Brain\Games\Prime\TASK;
 
 require_once ('bootstrap');
 
-runGame(makeGeneratorQuestionAnswer(), TASK);
+runGame(fn() => generatorQuestionAnswer(), TASK);

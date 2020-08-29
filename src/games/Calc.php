@@ -3,48 +3,29 @@
 namespace Brain\Games\Calc;
 
 use function Brain\Games\Utils\addQuestionAnswerToResult;
+use Error;
 
 const TASK = 'What is the result of the expression?';
+const MATH_OPERATIONS = ['+', '-', '*'];
 
-function makeGeneratorQuestionAnswer()
+function generatorQuestionAnswer()
 {
-    return function () {
-        $firstNumber = rand(1, 99);
-        $secondNumber = rand(1, 99);
-        $mathOperation = getMathOperation();
-        $question = "{$firstNumber} {$mathOperation} {$secondNumber}";
-        switch ($mathOperation) {
-            case '+':
-                $answer = $firstNumber + $secondNumber;
-                break;
-            case '-':
-                $answer = $firstNumber - $secondNumber;
-                break;
-            case '*':
-                $answer = $firstNumber * $secondNumber;
-                break;
-            default:
-                throw new Error("Unknown operation: {$mathOperation}");
-        }
-        return ['question' => $question, 'answer' => strval($answer)];
-    };
-}
-
-function getMathOperation()
-{
-    $randNumber = rand(0, 2);
-    switch ($randNumber) {
-        case 0:
-            $result = '+';
+    $firstNumber = rand(1, 99);
+    $secondNumber = rand(1, 99);
+    $mathOperation = MATH_OPERATIONS[rand(0, 2)];
+    $question = "{$firstNumber} {$mathOperation} {$secondNumber}";
+    switch ($mathOperation) {
+        case '+':
+            $answer = $firstNumber + $secondNumber;
             break;
-        case 1:
-            $result = '-';
+        case '-':
+            $answer = $firstNumber - $secondNumber;
             break;
-        case 2:
-            $result = '*';
+        case '*':
+            $answer = $firstNumber * $secondNumber;
             break;
         default:
-            throw new Error("Random number is out of range");
+            throw new Error("Unknown operation: {$mathOperation}");
     }
-    return $result;
+    return ['question' => $question, 'answer' => strval($answer)];
 }
