@@ -3,6 +3,7 @@
 namespace Brain\Games\Calc;
 
 use Error;
+
 use function Brain\GameEngine\runGame;
 
 const TASK = 'What is the result of the expression?';
