@@ -1,4 +1,4 @@
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/20b9c737294382f490ce/maintainability)](https://codeclimate.com/github/dinikoff/php-project-lvl1/maintainability)
 ![GitHub actions badge](https://github.com/dinikoff/php-project-lvl1/workflows/PHP%20CI/badge.svg)
 
 # Описание
