@@ -15,6 +15,9 @@ function generatorQuestionAnswer()
 
 function isPrime($n)
 {
+    if ($n <= 1) {
+        return  false;
+    }
     for ($x = 2; $x <= sqrt($n); $x++) {
         if ($n % $x == 0) {
             return false;
