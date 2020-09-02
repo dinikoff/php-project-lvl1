@@ -1,5 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/20b9c737294382f490ce/maintainability)](https://codeclimate.com/github/dinikoff/php-project-lvl1/maintainability)
-![GitHub actions badge](https://github.com/dinikoff/php-project-lvl1/workflows/PHP%20CI/badge.svg)
+[![GitHub actions badge](https://github.com/dinikoff/php-project-lvl1/workflows/PHP%20CI/badge.svg)](https://github.com/dinikoff/php-project-lvl1/actions)
 
 # Описание
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
