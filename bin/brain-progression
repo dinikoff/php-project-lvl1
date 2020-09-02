@@ -3,6 +3,6 @@
 
 use function \Brain\Games\Progression\runProgression;
 
-require_once ('bootstrap');
+require_once ('bootstrap.php');
 
 runProgression();

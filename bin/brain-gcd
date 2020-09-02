@@ -3,6 +3,6 @@
 
 use function \Brain\Games\Gcd\runGcd;
 
-require_once ('bootstrap');
+require_once ('bootstrap.php');
 
 runGcd();

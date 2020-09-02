@@ -3,6 +3,6 @@
 
 use function \Brain\Games\Cli\run;
 
-require_once ('bootstrap');
+require_once ('bootstrap.php');
 
 run();

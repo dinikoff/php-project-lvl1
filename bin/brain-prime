@@ -3,6 +3,6 @@
 
 use function \Brain\Games\Prime\runPrime;
 
-require_once ('bootstrap');
+require_once ('bootstrap.php');
 
 runPrime();

@@ -3,6 +3,6 @@
 
 use function \Brain\Games\Calc\runCalc;
 
-require_once ('bootstrap');
+require_once ('bootstrap.php');
 
 runCalc();

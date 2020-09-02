@@ -3,6 +3,6 @@
 
 use function \Brain\Games\Even\runEven;
 
-require_once ('bootstrap');
+require_once ('bootstrap.php');
 
 runEven();
