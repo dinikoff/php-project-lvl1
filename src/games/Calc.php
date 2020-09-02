@@ -15,6 +15,17 @@ function generatorQuestionAnswer()
     $secondNumber = rand(1, 99);
     $mathOperation = MATH_OPERATIONS[rand(0, count(MATH_OPERATIONS) - 1)];
     $question = "{$firstNumber} {$mathOperation} {$secondNumber}";
+    $answer = executeMathOperation($firstNumber, $secondNumber, $mathOperation);
+    return ['question' => $question, 'answer' => strval($answer)];
+}
+
+function runCalc()
+{
+    runGame(fn() => generatorQuestionAnswer(), TASK);
+}
+
+function executeMathOperation($firstNumber, $secondNumber, $mathOperation)
+{
     switch ($mathOperation) {
         case '+':
             $answer = $firstNumber + $secondNumber;
@@ -28,10 +39,5 @@ function generatorQuestionAnswer()
         default:
             throw new Error("Unknown operation: {$mathOperation}");
     }
-    return ['question' => $question, 'answer' => strval($answer)];
-}
-
-function runCalc()
-{
-    runGame(fn() => generatorQuestionAnswer(), TASK);
+    return $answer;
 }
