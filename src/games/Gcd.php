@@ -2,6 +2,8 @@
 
 namespace Brain\Games\Gcd;
 
+use function Brain\GameEngine\runGame;
+
 const TASK = 'Find the greatest common divisor of given numbers.';
 
 function generatorQuestionAnswer()
@@ -24,4 +26,9 @@ function getGcd($firstNumber, $secondNumber)
         }
     }
     return $firstNumber + $secondNumber;
+}
+
+function runGcd()
+{
+    runGame(fn() => generatorQuestionAnswer(), TASK);
 }

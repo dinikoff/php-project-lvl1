@@ -3,6 +3,7 @@
 namespace Brain\Games\Calc;
 
 use Error;
+use function Brain\GameEngine\runGame;
 
 const TASK = 'What is the result of the expression?';
 const MATH_OPERATIONS = ['+', '-', '*'];
@@ -27,4 +28,9 @@ function generatorQuestionAnswer()
             throw new Error("Unknown operation: {$mathOperation}");
     }
     return ['question' => $question, 'answer' => strval($answer)];
+}
+
+function runCalc()
+{
+    runGame(fn() => generatorQuestionAnswer(), TASK);
 }

@@ -1,10 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function \Brain\GameEngine\runGame;
-use function \Brain\Games\Even\generatorQuestionAnswer;
-use const \Brain\Games\Even\TASK;
+use function \Brain\Games\Even\runEven;
 
 require_once ('bootstrap');
 
-runGame(fn() => generatorQuestionAnswer(), TASK);
+runEven();

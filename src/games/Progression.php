@@ -2,6 +2,8 @@
 
 namespace Brain\Games\Progression;
 
+use function Brain\GameEngine\runGame;
+
 const TASK = 'What number is missing in the progression?';
 
 function generatorQuestionAnswer()
@@ -24,4 +26,9 @@ function generatorQuestionAnswer()
     }
     $question = implode(' ', $parts);
     return ['question' => $question, 'answer' => $answer];
+}
+
+function runProgression()
+{
+    runGame(fn() => generatorQuestionAnswer(), TASK);
 }

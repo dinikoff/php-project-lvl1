@@ -2,6 +2,8 @@
 
 namespace Brain\Games\Prime;
 
+use function Brain\GameEngine\runGame;
+
 const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function generatorQuestionAnswer()
@@ -19,4 +21,9 @@ function isPrime($n)
         }
     }
     return true;
+}
+
+function runPrime()
+{
+    runGame(fn() => generatorQuestionAnswer(), TASK);
 }

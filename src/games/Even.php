@@ -2,6 +2,8 @@
 
 namespace Brain\Games\Even;
 
+use function Brain\GameEngine\runGame;
+
 const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function generatorQuestionAnswer()
@@ -14,4 +16,9 @@ function generatorQuestionAnswer()
 function isEven($number)
 {
     return ($number % 2) === 0;
+}
+
+function runEven()
+{
+    runGame(fn() => generatorQuestionAnswer(), TASK);
 }
